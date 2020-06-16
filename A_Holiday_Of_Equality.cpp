@@ -16,20 +16,18 @@ int main() {
 }
 
 void solve() {
-  int n, m;
-  cin >> n >> m;
+  int n;
+  cin >> n;
+  ll a[n];
+  ll sum = 0;
 
-  for (int i = 1; i <= n; ++i) {
-    for (int j = 1; j <= m; ++j) {
-      cout << "#";
-    }
-    cout << '\n';
-
-    for (int j = 1; j <= m - 1; ++j) {
-      cout << ".";
-    }
-    cout << "#\n";
+  for (int i = 0; i < n; ++i) {
+    cin >> a[i];
+    sum += a[i];
   }
+  // deb(*max_element(a, a + n));
+  // deb(sum);
+  cout << *max_element(a, a + n) * n - sum;
 }
 
 void crap() {

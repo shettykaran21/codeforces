@@ -16,20 +16,12 @@ int main() {
 }
 
 void solve() {
-  int n, m;
-  cin >> n >> m;
-
-  for (int i = 1; i <= n; ++i) {
-    for (int j = 1; j <= m; ++j) {
-      cout << "#";
-    }
-    cout << '\n';
-
-    for (int j = 1; j <= m - 1; ++j) {
-      cout << ".";
-    }
-    cout << "#\n";
+  vector<ll> a(4);
+  for (int i = 0; i < 4; ++i) {
+    cin >> a[i];
   }
+  sort(a.begin(), a.end());
+  cout << a[3] - a[0] << " " << a[2] - a[0] << " " << a[1] - a[0];
 }
 
 void crap() {

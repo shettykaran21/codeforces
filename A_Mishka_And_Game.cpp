@@ -16,19 +16,26 @@ int main() {
 }
 
 void solve() {
-  int n, m;
-  cin >> n >> m;
+  int n;
+  cin >> n;
+  int cm = 0;
+  int cc = 0;
 
-  for (int i = 1; i <= n; ++i) {
-    for (int j = 1; j <= m; ++j) {
-      cout << "#";
+  while (n--) {
+    int m, c;
+    cin >> m >> c;
+    if (m > c) {
+      ++cm;
+    } else if (m < c) {
+      ++cc;
     }
-    cout << '\n';
-
-    for (int j = 1; j <= m - 1; ++j) {
-      cout << ".";
-    }
-    cout << "#\n";
+  }
+  if (cm > cc) {
+    cout << "Mishka";
+  } else if (cm < cc) {
+    cout << "Chris";
+  } else {
+    cout << "Friendship is magic!^^";
   }
 }
 
