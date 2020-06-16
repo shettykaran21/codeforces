@@ -1,0 +1,3 @@
+s = abcdeeefghhijklmnoooopqrrsttuuvwxyz
+c = 26
+YES
