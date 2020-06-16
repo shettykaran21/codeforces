@@ -7,11 +7,15 @@ using namespace std;
 #define PI 3.1415926535897932384626
 
 void crap();
+void solve();
 
 int main() {
   crap();
-
+  solve();
   return 0;
+}
+
+void solve() {
 }
 
 void crap() {
