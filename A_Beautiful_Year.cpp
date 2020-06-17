@@ -16,12 +16,25 @@ int main() {
 }
 
 void solve() {
-  vector<ll> a(4);
-  for (int i = 0; i < 4; ++i) {
-    cin >> a[i];
+  int y;
+  cin >> y;
+
+  while(true) {
+    ++y;
+    int yDub = y;
+    string ys = to_string(yDub);
+    sort(ys.begin(), ys.end());
+    int c = 1;
+    for (int i = 1; i < ys.length(); ++i) {
+      if (ys[i] != ys[i - 1]) {
+        ++c;
+      }
+    }
+    if (c == 4) {
+      cout << y;
+      break;
+    }
   }
-  sort(a.begin(), a.end());
-  cout << a[3] - a[0] << " " << a[3] - a[1] << " " << a[3] - a[2];
 }
 
 void crap() {
