@@ -3,6 +3,7 @@
 using namespace std;
 
 #define deb(x) cout << #x << " = " << x << '\n'
+#define all(x) x.begin(), x.end()
 #define ll long long
 #define PI 3.1415926535897932384626
 
