@@ -3,35 +3,47 @@
 using namespace std;
 
 #define deb(x) cout << #x << " = " << x << '\n'
+#define all(x) x.begin(), x.end()
 #define ll long long
 #define PI 3.1415926535897932384626
 
 void crap();
+void solve();
 
 int main() {
   crap();
+  solve();
+  return 0;
+}
 
-  int n;
-  cin >> n;
-  while (n--) {
-    int num, c;
-    cin >> num;
-    int temp = num;
-    c = 1;
-    while (temp > 10) {
-      temp /= 10;
-      ++c;
-    }
-    for (int i = 0; i < c; ++i) {
-      int lastDigit = num % 10;
-      if (lastDigit != 0) {
-        cout << lastDigit * pow(10, i) << " ";
+void solve() {
+  int t;
+  cin >> t;
+
+  while (t--) {
+    int n;
+    cin >> n;
+
+    int l, i = 0;
+    vector<int> vec;
+
+    while (n) {
+      l = n % 10;
+      if (l == 0) {
+        ++i;
+      } else {
+        vec.push_back(l * pow(10, i));
+        ++i;
       }
-      num /= 10;
+      n /= 10;
+    }
+
+    cout << vec.size() << '\n';
+    for (auto x : vec) {
+      cout << x << " ";
     }
     cout << '\n';
   }
-  return 0;
 }
 
 void crap() {

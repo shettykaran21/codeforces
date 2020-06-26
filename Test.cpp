@@ -3,6 +3,7 @@
 using namespace std;
 
 #define deb(x) cout << #x << " = " << x << '\n'
+#define all(x) x.begin(), x.end()
 #define ll long long
 #define PI 3.1415926535897932384626
 
@@ -13,7 +14,7 @@ bool isPrime(int n) {
     return false;
   }
   for (int i = 3; i <= sqrt(n); i += 2) {
-    if (n % i == 0) {
+    if (n % i == 0) {cd 
       return false;
     }
   }
@@ -70,7 +71,15 @@ int main() {
   // int arr[] = {1, 1, 3, 3, 3, 4, 4, 6, 9, 9, 9, 10};
   // cout << findFirst(arr, 12, 9);
 
-  cout << (10 + 5) % 2;
+  // string s1("Hel\0lo");
+  // deb(s1);
+  // deb(s1.size());
+
+  // for (int i = 0; i < 9; ++i) {
+  //   cout << pow(10, i) << " ";
+  // }
+
+  
 
   return 0;
 }
