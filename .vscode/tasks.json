@@ -4,11 +4,10 @@
     {
       "label": "Build and Run C++",
       "type": "shell",
-      "command": "",
+      "command": "/usr/bin/g++",
       "args": [
-        "g++",
         "-std=c++17",
-        "${relativeFile}",
+        "\"${relativeFile}\"",
         "-o",
         "test.out",
         "&&",
@@ -21,6 +20,9 @@
         "rm",
         "test.out"
       ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
       "group": {
         "kind": "build",
         "isDefault": true
