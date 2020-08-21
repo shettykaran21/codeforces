@@ -39,6 +39,21 @@
           "message": 5
         }
       }
+    },
+    {
+      "type": "shell",
+      "label": "Build C++",
+      "command": "/usr/bin/g++",
+      "args": [
+        "-g",
+        "${relativeFile}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$gcc"]
     }
   ]
 }
